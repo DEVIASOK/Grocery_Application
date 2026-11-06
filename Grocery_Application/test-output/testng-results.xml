@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-11-04T20:11:16 IST" name="Suite" finished-at="2026-11-04T20:11:26 IST" duration-ms="9592">
+    <groups>
+      <group name="smoke">
+        <method signature="Login_Test.verifyUserLoginWithINValidPassword(java.lang.String,java.lang.String)[pri:4, instance:main_Project_Grocery.Login_Test@1c9b0314]" name="verifyUserLoginWithINValidPassword" class="main_Project_Grocery.Login_Test"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2026-11-04T20:11:16 IST" name="Test" finished-at="2026-11-04T20:11:26 IST" duration-ms="9592">
+      <class name="main_Project_Grocery.Login_Test">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:main_Project_Grocery.Login_Test@1c9b0314]" started-at="2026-11-04T20:11:16 IST" name="initializeBrowser" finished-at="2026-11-04T20:11:21 IST" duration-ms="5028" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyUserLoginWithINValidPassword(java.lang.String,java.lang.String)[pri:4, instance:main_Project_Grocery.Login_Test@1c9b0314]" started-at="2026-11-04T20:11:21 IST" name="verifyUserLoginWithINValidPassword" description="User is trying to Login With INValid password" data-provider="loginData" finished-at="2026-11-04T20:11:22 IST" duration-ms="754" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithINValidPassword -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:main_Project_Grocery.Login_Test@1c9b0314]" started-at="2026-11-04T20:11:22 IST" name="closeBrowser" finished-at="2026-11-04T20:11:22 IST" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithINValidPassword status=SUCCESS method=Login_Test.verifyUserLoginWithINValidPassword(java.lang.String,java.lang.String)[pri:4, instance:main_Project_Grocery.Login_Test@1c9b0314] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:main_Project_Grocery.Login_Test@1c9b0314]" started-at="2026-11-04T20:11:22 IST" name="initializeBrowser" finished-at="2026-11-04T20:11:25 IST" duration-ms="2880" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyUserLoginWithINValidPassword(java.lang.String,java.lang.String)[pri:4, instance:main_Project_Grocery.Login_Test@1c9b0314]" started-at="2026-11-04T20:11:25 IST" name="verifyUserLoginWithINValidPassword" description="User is trying to Login With INValid password" data-provider="loginData" finished-at="2026-11-04T20:11:26 IST" duration-ms="793" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[adminpp90]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithINValidPassword -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:main_Project_Grocery.Login_Test@1c9b0314]" started-at="2026-11-04T20:11:26 IST" name="closeBrowser" finished-at="2026-11-04T20:11:26 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithINValidPassword status=SUCCESS method=Login_Test.verifyUserLoginWithINValidPassword(java.lang.String,java.lang.String)[pri:4, instance:main_Project_Grocery.Login_Test@1c9b0314] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- main_Project_Grocery.Login_Test -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

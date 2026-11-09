@@ -30,47 +30,57 @@ public class ManageDeliveryBoy_Page {
 	@FindBy(name="Search") WebElement existing_deli_search;
 	@FindBy(xpath="//table/tbody/tr/td") WebElement deliveryBoyNameAfterSearch;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement newDeliveryBoyCreatedMessage;
-	 public void   new_DeliveryBoyBTN()
+	 public ManageDeliveryBoy_Page   new_DeliveryBoyBTN()
 	 {
 		 new_DeliveryBoy.click();
+		 return this;
 		 
 	 }
-	 public void    new_DeliveryBoy_name(String  deli_name)
+	 public ManageDeliveryBoy_Page    new_DeliveryBoy_name(String  deli_name)
 	 {
 		 new_DeliveryBoy_name.sendKeys( deli_name);
+		 return this;
 		 
 	 }
-	 public void    new_DeliveryBoy_email( String deli_email)
+	 public ManageDeliveryBoy_Page    new_DeliveryBoy_email( String deli_email)
 	 {
 		 new_DeliveryBoy_email.sendKeys(deli_email);
+		 return this;
 		 
 	 }
-	 public void    new_DeliveryBoy_phonenum(String deli_phone)
+	 public ManageDeliveryBoy_Page    new_DeliveryBoy_phonenum(String deli_phone)
 	 {
 		 new_DeliveryBoy_phonenum.sendKeys(deli_phone);
+		 return  this;
 		 
 	 }
-	 public void    new_DeliveryBoyAddress(String deli_address)
+	 public ManageDeliveryBoy_Page    new_DeliveryBoyAddress(String deli_address)
 	 {
-		 new_Address.sendKeys(deli_address);	 
+		 new_Address.sendKeys(deli_address);
+		 return  this;	 
 	 }
 	 
-	 public void    new_DeliveryBoy_username(String deli_user_name)
+	 public ManageDeliveryBoy_Page    new_DeliveryBoy_username(String deli_user_name)
 	 {
-		 new_DeliveryBoy_username.sendKeys(deli_user_name);		 
+		 new_DeliveryBoy_username.sendKeys(deli_user_name);
+		 return this;		 
 	 }
-	 public void   new_DeliveryBoy_psswd(String deli_password)
+	 public ManageDeliveryBoy_Page   new_DeliveryBoy_psswd(String deli_password)
 	 {
 		 new_DeliveryBoy_psswd.sendKeys(deli_password);
+		 return this;
 		 
 	 }
-	 public void   save_bttn()
+	 public ManageDeliveryBoy_Page   save_bttn()
 	 {
 		 save_butn. click();
+		 return this; 
+		 
 		 
 	 }
-	 public void clickOnSearch() {
+	 public ManageDeliveryBoy_Page clickOnSearch() {
 		searchDeliveryBoy.click();
+		return this;
 		
 	 }
 	 public void deli_username_search(String deli_name) {
@@ -106,9 +116,10 @@ public class ManageDeliveryBoy_Page {
 		return false;
 		
 	 }
-	 public void scroll_DeliveryBoyPage() {
+	 public ManageDeliveryBoy_Page scroll_DeliveryBoyPage() {
 			JavascriptExecutor js =(JavascriptExecutor) driver;
 			js.executeScript("window.scrollBy(0,1000)","");
+			return this;
 		
 	 }
 	

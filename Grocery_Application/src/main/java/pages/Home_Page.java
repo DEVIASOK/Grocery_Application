@@ -45,10 +45,10 @@ public class Home_Page {        //declares a class named Homepage
 		adminMoreInfoBtn.click();
 		return new AdminUsers_Page(driver);
 	}
-	public Home_Page  manageDeliveryBoy_MoreInfo()
+	public ManageDeliveryBoy_Page  manageDeliveryBoy_MoreInfo()
 	{
 		manageDeliveryBoy_Btn.click();
-		return this;
+		return new ManageDeliveryBoy_Page(driver);
 
 	}
 	public Home_Page managePageMoreInfo()

@@ -15,6 +15,8 @@ import utilities.ExcelUtility;
 
 
 public class ManageDeliveryBoy_Test extends Grocery_Base{
+	Home_Page home;
+	ManageDeliveryBoy_Page delivery;
 	
 	@Test(priority=1)
 	public  void verifyuserisabletoaddNewdeliveryboy() throws IOException {
@@ -24,15 +26,9 @@ public class ManageDeliveryBoy_Test extends Grocery_Base{
 		String password=ExcelUtility.readStringData(0, 1, "Login_Data");
 		
 		Login_Page login=new Login_Page(driver);
-		login.enterUsername(user_name);
-		login.enterPassword(password);
-		login.ClickOnLoginBtn();
+		login.enterUsername(user_name).enterPassword(password).ClickOnLoginBtn();
+		delivery=home.manageDeliveryBoy_MoreInfo();
 		
-		Home_Page home=new Home_Page(driver);
-		home.manageDeliveryBoy_MoreInfo();
-		
-		ManageDeliveryBoy_Page delivery= new 	ManageDeliveryBoy_Page(driver);
-		delivery.new_DeliveryBoyBTN();
 		
 		String deli_name=ExcelUtility.readStringData(0, 0, "DeliveryBoy_Data");
 		String deli_email=ExcelUtility.readStringData(0, 1, "DeliveryBoy_Data");
@@ -41,16 +37,14 @@ public class ManageDeliveryBoy_Test extends Grocery_Base{
 		String deli_user_name=ExcelUtility.readStringData(0, 4, "DeliveryBoy_Data");
 		String deli_password=ExcelUtility.readStringData(0, 5, "DeliveryBoy_Data");
 		
-		
-		delivery.new_DeliveryBoy_name(deli_name);
-		delivery.scroll_DeliveryBoyPage();
-		delivery.new_DeliveryBoy_email(deli_email);
-		delivery.new_DeliveryBoy_phonenum(deli_phone);
-		delivery.new_DeliveryBoyAddress(deli_address);
-		delivery.new_DeliveryBoy_username(deli_user_name);
-		delivery.new_DeliveryBoy_psswd(deli_password);
-	
-		delivery.save_bttn();
+		delivery.new_DeliveryBoyBTN().new_DeliveryBoy_name(deli_name)
+		.scroll_DeliveryBoyPage()
+		.new_DeliveryBoy_email(deli_email)
+		.new_DeliveryBoy_phonenum(deli_phone)
+		.new_DeliveryBoyAddress(deli_address)
+		.new_DeliveryBoy_username(deli_user_name)
+		.new_DeliveryBoy_psswd(deli_password)
+		.save_bttn();
 		
 		boolean actual=delivery.newDeliveryBoyCreatedMessage();
 		Assert.assertTrue(actual, Constant.DELIVERY_BOY_CREATION_ERROR);
@@ -64,19 +58,16 @@ public class ManageDeliveryBoy_Test extends Grocery_Base{
 		String password=ExcelUtility.readStringData(0, 1, "Login_Data");
 		
 		Login_Page login=new Login_Page(driver);
-		login.enterUsername(user_name);
-		login.enterPassword(password);
-		login.ClickOnLoginBtn();
+		login.enterUsername(user_name).enterPassword(password).ClickOnLoginBtn();
+		delivery=home.manageDeliveryBoy_MoreInfo();
 		
-		Home_Page home=new Home_Page(driver);
-		home.manageDeliveryBoy_MoreInfo();
-		ManageDeliveryBoy_Page delivery= new 	ManageDeliveryBoy_Page(driver);
-		delivery.clickOnSearch();
+		
 		
 		String deli_name=ExcelUtility.readStringData(0, 0, "DeliveryBoy_Data");
 		String deli_email=ExcelUtility.readStringData(0, 1, "DeliveryBoy_Data");
 		String deli_phone=ExcelUtility.readIntegerData(0, 2, "DeliveryBoy_Data");
 		
+		delivery.clickOnSearch();
 		delivery.deli_username_search(deli_name);
 		delivery.deli_email_search(deli_email);
 		delivery.deli_phone_search(deli_phone);

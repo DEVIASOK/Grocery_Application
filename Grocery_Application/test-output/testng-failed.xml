@@ -2,15 +2,18 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <parameter name="browsers" value="Chrome"/>
+  <listeners>
+    <listener class-name="reportGeneration.Listeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="main_Project_Grocery.Login_Test">
+      <class name="testScripts.AdminUsers_Test">
         <methods>
-          <include name="verifyUserLoginWithINValidPassword"/>
           <include name="closeBrowser"/>
           <include name="initializeBrowser"/>
+          <include name="verifyUserAbleToSearchNewUser"/>
         </methods>
-      </class> <!-- main_Project_Grocery.Login_Test -->
+      </class> <!-- testScripts.AdminUsers_Test -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

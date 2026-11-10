@@ -19,7 +19,7 @@ public class AdminUsers_Page {        //declares a class named Homepage
 		this.driver=driver;
 		PageFactory.initElements(driver,this);//this is a Selenium WebDriver method used in Page Object Model (POM) to initialize all the @FindBy annotated WebElement fields in a class.
 	}
-	PageUtility page=new PageUtility();
+	PageUtility page_utility=new PageUtility();
 	@FindBy(linkText="New") WebElement newAdminButton;
 	@FindBy(name="username")WebElement user;
 	@FindBy(name="password")WebElement passwd;
@@ -54,9 +54,9 @@ public AdminUsers_Page enterPassword(String password)
 }
 public AdminUsers_Page userTypeDropDOwn()
 {
-	page.selectDropDownByValue(userType, "Staff");
-	//Select s= new Select(userType);
-	//s.selectByVisibleText("Staff");
+	page_utility.selectDropDownWithVisibleText(userType, "Staff");
+//	Select s= new Select(userType);
+//	s.selectByVisibleText("Staff");
 	return this;
 }
 public AdminUsers_Page  saveButtoncClick()
@@ -97,7 +97,7 @@ public AdminUsers_Page enter_existing_username(String  new_user_name) {
 }
 public AdminUsers_Page enter_existing_userType() {
 	
-	page.selectDropDownWithVisibleText(existing_userType, "Staff");
+	page_utility.selectDropDownWithVisibleText(existing_userType, "Staff");
 //or Select s= new Select(existing_userType);
 //	 s.selectByVisibleText("Staff");
 	return this;
@@ -111,7 +111,7 @@ public  AdminUsers_Page click_Search()
 }
 
 public String  get_user_name()
-{
+{	  page_utility.scrollDownUsingJavaScriptExecutor(driver);
 	  return user_in_table.getText();
 }
 
